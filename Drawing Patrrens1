@@ -1,4 +1,4 @@
-// frist this langauge "C++" : 
+// frist this is langauge "C++" : 
 	#include<iostream>
 	using namespace std;
 	int main()
