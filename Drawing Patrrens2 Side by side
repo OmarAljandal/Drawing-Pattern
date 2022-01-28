@@ -1,1 +1,66 @@
+//frist this is langauge "C++" : 
+#include <iostream>
+using namespace std;
+//function to sapce....
+void space(int n)
+{
+    for(int i=1;i<=n;i++)
+        cout<<" ";
+    cout<<"\t";
+}
+//function to print stars...
+void printStars(int n)
+{
+    for(int k=1;k<=n;k++)
+	{
+        cout<<"*"<<" ";
+    }
+    if(n<=2)
+        cout<<"\t\t";
+    else
+        cout<<"\t";
+}
+int main()
+{
 
+    for(int i=1;i<=6;i++)
+	{
+        if(i==3||i==5)
+            continue;
+        for(int j = 1; j<=i;j++)
+		{
+            cout<<" "<<"*";
+        }
+        space((6-i)+3);            //adding more 3 spaces and \t to make space between a) and b)
+        int n;
+        if(i==1)
+            n=7-i;
+        else if(i==6)
+            n=1;
+        else
+            n=6-i;
+        printStars(n);
+        
+        for(int x=6-i;x>0;x--)
+            cout<<" ";
+        for(int j = 1; j<=i;j++)
+		{
+            cout<<" "<<"*";
+        }
+        if(i==1)
+            cout<<"\t\t ";
+        else
+            cout<<"\t ";
+        int y;
+        if(i==1)
+            y=7-i;
+        else if(i==6)
+            y=1;
+        else
+            y=6-i;
+        for(int x=6-y;x>0;x--)
+            cout<<" ";
+        printStars(y);
+        cout<<endl;
+    }    
+}
